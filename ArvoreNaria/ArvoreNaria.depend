@@ -1,0 +1,141 @@
+# depslib dependency file v1.0
+1534418796 source:e:\1-sextosemestre\ted\arvorenaria\main.cpp
+	<iostream>
+	<MinhaInformacao.h>
+	<NoDeArvoreNaria.h>
+	<ArvoreNaria.h>
+
+1534344174 e:\1-sextosemestre\ted\arvorenaria\include\minhainformacao.h
+	<InformacaoDeArvoreNaria.h>
+	<iostream>
+	<sstream>
+	<string.h>
+
+1534357622 source:e:\1-sextosemestre\ted\arvorenaria\src\arvorenaria.cpp
+	"ArvoreNaria.h"
+
+1534418908 e:\1-sextosemestre\ted\arvorenaria\include\arvorenaria.h
+	<iostream>
+	"NoDeArvoreNaria.h"
+	"InformacaoDeArvoreNaria.h"
+
+1534005866 source:e:\1-sextosemestre\ted\arvorenaria\src\informacaodearvorenaria.cpp
+
+1534344300 e:\1-sextosemestre\ted\arvorenaria\include\informacaodearvorenaria.h
+
+1534358058 source:e:\1-sextosemestre\ted\arvorenaria\src\minhainformacao.cpp
+	"MinhaInformacao.h"
+
+1534418836 source:e:\1-sextosemestre\ted\arvorenaria\src\nodearvorenaria.cpp
+	"NoDeArvoreNaria.h"
+
+1534357178 e:\1-sextosemestre\ted\arvorenaria\include\nodearvorenaria.h
+	<InformacaoDeArvoreNaria.h>
+	<stdlib.h>
+	<iostream>
+
+1534357312 source:f:\1-sextosemestre\ted\arvorenaria\main.cpp
+	<iostream>
+	<MinhaInformacao.h>
+	<NoDeArvoreNaria.h>
+	<ArvoreNaria.h>
+
+1534344174 f:\1-sextosemestre\ted\arvorenaria\include\minhainformacao.h
+	<InformacaoDeArvoreNaria.h>
+	<iostream>
+	<sstream>
+	<string.h>
+
+1534344300 f:\1-sextosemestre\ted\arvorenaria\include\informacaodearvorenaria.h
+
+1534357622 source:f:\1-sextosemestre\ted\arvorenaria\src\arvorenaria.cpp
+	"ArvoreNaria.h"
+
+1534336498 f:\1-sextosemestre\ted\arvorenaria\include\arvorenaria.h
+	<iostream>
+	"NoDeArvoreNaria.h"
+	"InformacaoDeArvoreNaria.h"
+
+1534005866 source:f:\1-sextosemestre\ted\arvorenaria\src\informacaodearvorenaria.cpp
+
+1534358058 source:f:\1-sextosemestre\ted\arvorenaria\src\minhainformacao.cpp
+	"MinhaInformacao.h"
+
+1534358226 source:f:\1-sextosemestre\ted\arvorenaria\src\nodearvorenaria.cpp
+	"NoDeArvoreNaria.h"
+
+1534357178 f:\1-sextosemestre\ted\arvorenaria\include\nodearvorenaria.h
+	<InformacaoDeArvoreNaria.h>
+	<stdlib.h>
+	<iostream>
+
+1534352842 source:f:\1sextosemestre\ted\arvorenaria\main.cpp
+	<iostream>
+	<MinhaInformacao.h>
+	<NoDeArvoreNaria.h>
+	<ArvoreNaria.h>
+
+1534344174 f:\1sextosemestre\ted\arvorenaria\include\minhainformacao.h
+	<InformacaoDeArvoreNaria.h>
+	<iostream>
+	<sstream>
+	<string.h>
+
+1534344300 f:\1sextosemestre\ted\arvorenaria\include\informacaodearvorenaria.h
+
+1534335018 f:\1sextosemestre\ted\arvorenaria\include\nodearvorenaria.h
+	<InformacaoDeArvoreNaria.h>
+	<stdlib.h>
+	<iostream>
+
+1534336498 f:\1sextosemestre\ted\arvorenaria\include\arvorenaria.h
+	<iostream>
+	"NoDeArvoreNaria.h"
+	"InformacaoDeArvoreNaria.h"
+
+1534341630 source:f:\1sextosemestre\ted\arvorenaria\src\arvorenaria.cpp
+	"ArvoreNaria.h"
+
+1534005866 source:f:\1sextosemestre\ted\arvorenaria\src\informacaodearvorenaria.cpp
+
+1534344272 source:f:\1sextosemestre\ted\arvorenaria\src\minhainformacao.cpp
+	"MinhaInformacao.h"
+
+1534344360 source:f:\1sextosemestre\ted\arvorenaria\src\nodearvorenaria.cpp
+	"NoDeArvoreNaria.h"
+
+1534418796 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\main.cpp
+	<iostream>
+	<MinhaInformacao.h>
+	<NoDeArvoreNaria.h>
+	<ArvoreNaria.h>
+
+1534418926 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\minhainformacao.h
+	<InformacaoDeArvoreNaria.h>
+	<iostream>
+	<sstream>
+	<string.h>
+
+1534344300 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\informacaodearvorenaria.h
+
+1534418950 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\nodearvorenaria.h
+	<InformacaoDeArvoreNaria.h>
+	<stdlib.h>
+	<iostream>
+
+1534418908 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\arvorenaria.h
+	<iostream>
+	"NoDeArvoreNaria.h"
+	"InformacaoDeArvoreNaria.h"
+
+1534357622 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\arvorenaria.cpp
+	"ArvoreNaria.h"
+
+1534005866 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\informacaodearvorenaria.cpp
+
+1534358058 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\minhainformacao.cpp
+	"MinhaInformacao.h"
+
+1534418836 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\nodearvorenaria.cpp
+	"NoDeArvoreNaria.h"
+
