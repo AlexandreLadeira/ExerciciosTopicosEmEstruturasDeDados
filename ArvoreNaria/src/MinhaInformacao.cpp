@@ -1,22 +1,22 @@
 #include "MinhaInformacao.h"
 
 
-MinhaInformacao::MinhaInformacao(int num) throw()
+MinhaInformacao::MinhaInformacao(int num)
 {
     this->meuNumero = num;
 }
 
-int MinhaInformacao::getNumero() throw()
+int MinhaInformacao::getNumero()
 {
     return this->meuNumero;
 }
 
-void MinhaInformacao::setNumero(int num) throw()
+void MinhaInformacao::setNumero(int num)
 {
     this->meuNumero = num;
 }
 
-int MinhaInformacao::compareTo(InformacaoDeArvoreNaria * informacao) throw (char*)
+int MinhaInformacao::compareTo(InformacaoDeArvoreNaria * informacao)
 {
     if(informacao == NULL)
        throw "A informacao nao pode ser nula para comparar";
@@ -39,7 +39,7 @@ void MinhaInformacao::printar()
     std::cout << this->getNumero();
 }
 
-const char* MinhaInformacao::toString() throw()
+const char* MinhaInformacao::toString()
 {
   std::stringstream strs;
   strs << this->meuNumero;

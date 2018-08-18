@@ -1,100 +1,46 @@
 #include "ArvoreNaria.h"
 
 
-ArvoreNaria::ArvoreNaria(unsigned int n) throw (char*)
+ArvoreNaria::ArvoreNaria(unsigned int n)
 {
     if(n < 2)
-        throw "O n da arvore deve ser de no minimo 2";
+        throw invalid_argument("O n da arvore deve ser de no minimo 2");
 
     this->n = n;
-    this->raiz = new NoDeArvoreNaria(n);
+    this->raiz = NULL;
 }
 
 
 
-NoDeArvoreNaria* ArvoreNaria::getRaiz() throw()
+NoDeArvoreNaria* ArvoreNaria::getRaiz()
 {
     return this->raiz;
 }
 
-void ArvoreNaria::guarde(InformacaoDeArvoreNaria* info, NoDeArvoreNaria* no) throw (char*)
+void ArvoreNaria::guarde(InformacaoDeArvoreNaria* info)
 {
-    if(info == NULL)
-        throw "A informacao a ser inserida nao pode ser nula!";
+    if(this->raiz == NULL)
+        this->raiz = new NoDeArvoreNaria(this->n);
 
-    if(no == NULL)
-    {
-        no = new NoDeArvoreNaria(this->n);
-        no->inserirInformacao(info);
-        return;
-    }
+    this->raiz->guarde(info);
+}
 
-    if(no->procuraInformacao(info) >= 0)
-            throw "A informacao ja existe";
+void ArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
+{
+    if(this->raiz == NULL)
+        throw invalid_argument("Nao existem informacoes para serem excluidas");
 
-    if(!no->haEspaco())
-    {
-        if(info->compareTo(no->getInfo(0)) < 0)
-        {
-            if(no->getPtr(0) == NULL)
-                no->criaNoNaPosicao(0);
-
-            guarde(info,no->getPtr(0));
-        }
-
-        else
-            if(info->compareTo(no->getInfo(this->n - 2)) > 0 )
-            {
-                if(no->getPtr(this->n-1) == NULL)
-                    no->criaNoNaPosicao(this->n - 1);
-
-                //no->getPtr(this->ptr)
-                guarde(info,no->getPtr(this->n - 1));
-            }
-
-            else
-            {
-                int i = 0;
-
-                for(; i < this->n-2; i++)
-                    if(info->compareTo(no->getInfo(i)) > 0 && info->compareTo(no->getInfo(i+1)) <0)
-                    {
-                        if(no->getPtr(i+1) == NULL)
-                            no->criaNoNaPosicao(i+1);
-
-                        guarde(info,no->getPtr(i+1));
-                    }
-
-
-            }
-    }
-    else
-        no->inserirInformacao(info);
-
+    this->raiz->exclua(info);
 }
 
 
 ostream& operator << (ostream& os, const ArvoreNaria& arv)
 {
-    os << "Teste";
-    os << "Mais UmTestes";
+    arv.raiz->montaOsArvore(os);
+
     return os;
 }
 
-void ArvoreNaria::printaArvore(NoDeArvoreNaria* no) throw()
-{
-    if(no != NULL)
-    {
-        no->printaInfos();
-
-        int i = 0;
-
-        for(;i < no->getQtdNos();i++)
-            printaArvore(no->getPtr(i));
-    }
-
-
-}
 
 
 

@@ -9,13 +9,13 @@
 class MinhaInformacao : public InformacaoDeArvoreNaria
 {
     public:
-        MinhaInformacao(int) throw();
+        MinhaInformacao(int);
 
-        int getNumero() throw();
-        void setNumero(int) throw();
+        int getNumero();
+        void setNumero(int);
 
-        int compareTo(InformacaoDeArvoreNaria*) throw(char*) ;
-        const char* toString() throw();
+        int compareTo(InformacaoDeArvoreNaria*);
+        const char* toString();
         void printar();
 
 

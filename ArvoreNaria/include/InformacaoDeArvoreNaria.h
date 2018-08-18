@@ -5,8 +5,8 @@
 class InformacaoDeArvoreNaria
 {
     public:
-        virtual int compareTo(InformacaoDeArvoreNaria*) throw(char*) {};
-        virtual const char* toString() throw() {};
+        virtual int compareTo(InformacaoDeArvoreNaria*){};
+        virtual const char* toString(){};
         virtual void printar()  {};
 
     protected:

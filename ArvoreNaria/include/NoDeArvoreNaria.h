@@ -4,32 +4,35 @@
 #include <InformacaoDeArvoreNaria.h>
 #include <stdlib.h>
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
 
 class NoDeArvoreNaria
 {
     public:
-        NoDeArvoreNaria(unsigned int) throw();
+        NoDeArvoreNaria(unsigned int);
 
-        InformacaoDeArvoreNaria* getInfo(unsigned i) throw (char*);
-        NoDeArvoreNaria* getPtr(unsigned i) throw (char*);
-        unsigned int getQtdNos() throw();
+        InformacaoDeArvoreNaria* getInfo(unsigned i) const;
+        NoDeArvoreNaria* getPtr(unsigned i);
+        unsigned int getQtdNos();
 
-        int haEspaco() throw();
-        int procuraInformacao(InformacaoDeArvoreNaria*) throw (char*);
+        int haEspaco();
+        int procuraInformacao(InformacaoDeArvoreNaria*);
 
-        void inserirInformacao(InformacaoDeArvoreNaria*) throw(char*);
-        void criaNoNaPosicao(unsigned int);
+        void inserirInformacao(InformacaoDeArvoreNaria*);
+        void guarde(InformacaoDeArvoreNaria*);
 
-        void printaInfos() throw();
+        void exclua(InformacaoDeArvoreNaria *);
+
+        void montaOsArvore(ostream&);
         friend ostream& operator<<(ostream& os, const NoDeArvoreNaria& no);
 
     private:
         InformacaoDeArvoreNaria ** vetInfo;
         NoDeArvoreNaria ** vetPtr;
         unsigned int n;
-        int qtdInfos;
+        unsigned int qtdInfos;
         unsigned int qtdNos;
 
 };
