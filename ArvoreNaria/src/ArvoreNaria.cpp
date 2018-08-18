@@ -31,12 +31,18 @@ void ArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
         throw invalid_argument("Nao existem informacoes para serem excluidas");
 
     this->raiz->exclua(info);
+
+    if(this->raiz->getQtdInfos() == 0)
+        this->raiz = NULL;
 }
 
 
 ostream& operator << (ostream& os, const ArvoreNaria& arv)
 {
-    arv.raiz->montaOsArvore(os);
+    if(arv.raiz != NULL)
+        arv.raiz->montaOsArvore(os);
+    else
+        os << "()";
 
     return os;
 }

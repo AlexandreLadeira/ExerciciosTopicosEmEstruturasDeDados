@@ -16,11 +16,19 @@ class NoDeArvoreNaria
         InformacaoDeArvoreNaria* getInfo(unsigned i) const;
         NoDeArvoreNaria* getPtr(unsigned i);
         unsigned int getQtdNos();
+        unsigned int getQtdInfos();
 
         int haEspaco();
+        int ehFolha();
+
         int procuraInformacao(InformacaoDeArvoreNaria*);
 
         void inserirInformacao(InformacaoDeArvoreNaria*);
+        void removerInformacaoDaPosicao(unsigned int);
+
+        void substituirInformacao(unsigned int,unsigned int,unsigned int);
+        bool escolherUmLado(unsigned int);
+
         void guarde(InformacaoDeArvoreNaria*);
 
         void exclua(InformacaoDeArvoreNaria *);
