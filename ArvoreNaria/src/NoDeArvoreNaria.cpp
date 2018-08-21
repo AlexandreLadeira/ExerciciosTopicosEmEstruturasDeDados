@@ -307,7 +307,7 @@ void NoDeArvoreNaria::montaOsArvore(ostream& os)
    os << "(";
 
    int i;
-   int j;
+
    for(i = 0; i < this->qtdInfos; i++)
     {
         if(this->getPtr(i) != NULL)
@@ -316,13 +316,10 @@ void NoDeArvoreNaria::montaOsArvore(ostream& os)
         os << " ";
         os << this->getInfo(i)->toString();
         os << " ";
-
-        if(this->getPtr(i + 1) != NULL)
-        {
-            this->getPtr(i + 1)->montaOsArvore(os);
-
-        }
     }
+
+    if(this->getPtr(this->n - 1) != NULL)
+        this->getPtr(this->n - 1)->montaOsArvore(os);
 
 
     os << ")";

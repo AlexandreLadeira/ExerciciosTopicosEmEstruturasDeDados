@@ -42,7 +42,7 @@ int main()
         arvore.guarde(&teste8);
         arvore.guarde(&teste5);*/
 
-      // arvore.exclua(&teste6);
+       // arvore.exclua(&teste6);
 
         cout << arvore;
 
