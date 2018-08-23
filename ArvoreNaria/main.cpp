@@ -18,6 +18,7 @@ int main()
         MinhaInformacao teste6(6);
         MinhaInformacao teste7(7);
         MinhaInformacao teste8(8);
+        MinhaInformacao teste9(9);
 
         ArvoreNaria arvore(3);
 
@@ -42,7 +43,8 @@ int main()
         arvore.guarde(&teste8);
         arvore.guarde(&teste5);*/
 
-       // arvore.exclua(&teste6);
+        arvore.exclua(&teste6);
+        arvore.guarde(&teste9);
 
         cout << arvore;
 

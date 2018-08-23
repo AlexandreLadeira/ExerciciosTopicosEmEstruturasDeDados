@@ -104,7 +104,7 @@
 1534344360 source:f:\1sextosemestre\ted\arvorenaria\src\nodearvorenaria.cpp
 	"NoDeArvoreNaria.h"
 
-1534850424 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\main.cpp
+1535026262 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\main.cpp
 	<iostream>
 	<MinhaInformacao.h>
 	<NoDeArvoreNaria.h>
@@ -116,7 +116,7 @@
 	<sstream>
 	<string.h>
 
-1534761688 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\informacaodearvorenaria.h
+1535026133 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\informacaodearvorenaria.h
 
 1534761688 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\nodearvorenaria.h
 	<InformacaoDeArvoreNaria.h>
@@ -138,7 +138,7 @@
 1534761688 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\minhainformacao.cpp
 	"MinhaInformacao.h"
 
-1534850501 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\nodearvorenaria.cpp
+1535027289 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\nodearvorenaria.cpp
 	"NoDeArvoreNaria.h"
 
 1534632915 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\main.cpp

@@ -96,19 +96,19 @@ void NoDeArvoreNaria::inserirInformacao(InformacaoDeArvoreNaria* info)
 
 int NoDeArvoreNaria::procuraInformacao(InformacaoDeArvoreNaria* info)
 {
-    for(int i = 0; i < this->qtdInfos; i++)
+   /* for(int i = 0; i < this->qtdInfos; i++)
         if(this->vetInfo[i]->compareTo(info) == 0)
             return i;
 
-    return -1;
+    return -1; */
 
-   /* if(info == NULL)
+   if(info == NULL)
         throw invalid_argument("a informacao procurada nao pode ser nula");
 
     int incio,meio,fim;
 
     incio   = 0;
-    fim     = this->qtdInfos;
+    fim     = this->qtdInfos - 1;
 
 
     while(incio <= fim)
@@ -124,7 +124,7 @@ int NoDeArvoreNaria::procuraInformacao(InformacaoDeArvoreNaria* info)
             fim = meio -1;
     }
 
-    return -1; */
+    return -1;
 
 
 
@@ -329,9 +329,9 @@ ostream& operator<<(ostream& os, const NoDeArvoreNaria& no)
 {
     for(int i = 0;i < no.qtdInfos;i++)
     {
-        cout<<" ";
+        os<<" ";
         os << no.getInfo(i)->toString();
-        cout<<" ";
+        os<<" ";
     }
 
     return os;
