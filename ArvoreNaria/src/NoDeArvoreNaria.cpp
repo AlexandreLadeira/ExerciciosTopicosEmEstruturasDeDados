@@ -202,8 +202,9 @@ void NoDeArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
                                                     // == 0; está nesse nó, logo precisamos remover dele.
                                                     // <  0; i fica com a qtdInfos; logo devemos procurar no vetPtr[i];
     if(!this->ehFolha())
-    {   //Essas duas coindicoes garantem que se a informacao nao está no nó atual, a procura irá pra o nó indicado por i (Se possivel)
-        if((i < this->qtdInfos && this->getInfo(i)->compareTo(info) > 0) || (i == this->qtdInfos && this->getPtr(i) != NULL))
+    {   //Essas duas coindicoes garantem que se a informacao nao está no nó atual,
+        //a procura irá pra o nó indicado por i (Se possivel)
+        if( this->getPtr(i) != NULL && ((i < this->qtdInfos && this->getInfo(i)->compareTo(info) > 0) || i == this->qtdInfos ))
         {
             NoDeArvoreNaria* no = this->getPtr(i); // vai para o nó em que a informacao pode estar
             no->exclua(info);
@@ -232,8 +233,6 @@ void NoDeArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
                         }
                         this->vetInfo[j] = this->vetInfo[j - 1];
                     }
-
-
                 else // tem filho a direita, desloca para a esquerda
                     for(int j = i ; j <= this->qtdInfos ; j++)
                     {
@@ -243,8 +242,6 @@ void NoDeArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
                             break;
                         }
                         this->vetInfo[j] = this->vetInfo[j + 1];
-
-
                     }
             }
 
@@ -266,9 +263,12 @@ void NoDeArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
             */
 
         }
-    }
-    else if(this->vetInfo[i]->compareTo(info) == 0) // se está em um nó que é folha, só devemos excluir
-            this->removerInformacaoDaPosicao(i);
+    }       // se está em um nó que é folha, só devemos excluir
+    else if(this->getPtr(i) != NULL && this->vetInfo[i]->compareTo(info) == 0)
+                this->removerInformacaoDaPosicao(i);
+
+
+
 
 
 }

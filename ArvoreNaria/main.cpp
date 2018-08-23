@@ -23,18 +23,28 @@ int main()
         ArvoreNaria arvore(3);
 
         arvore.guarde(&teste0);
-        arvore.guarde(&teste4);
-        arvore.guarde(&teste2);
-        arvore.guarde(&teste8);
-        arvore.guarde(&teste5);
-        arvore.guarde(&teste7);
         arvore.guarde(&teste);
+        arvore.guarde(&teste2);
         arvore.guarde(&teste3);
-        arvore.guarde(&teste6);
-
-
+        arvore.guarde(&teste4);
+        arvore.guarde(&teste5);
 
         cout << arvore;
+
+        arvore.exclua(&teste2);
+        arvore.exclua(&teste2);
+
+
+
+
+
+
+
+       // arvore.exclua(&teste7);
+
+
+
+
 
         cout << "\n";
        /*arvore.guarde(&teste);
@@ -43,8 +53,7 @@ int main()
         arvore.guarde(&teste8);
         arvore.guarde(&teste5);*/
 
-        arvore.exclua(&teste6);
-        arvore.guarde(&teste9);
+
 
         cout << arvore;
 
