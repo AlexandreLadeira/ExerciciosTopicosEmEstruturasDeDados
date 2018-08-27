@@ -204,7 +204,8 @@ void NoDeArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
     if(!this->ehFolha())
     {   //Essas duas coindicoes garantem que se a informacao nao está no nó atual,
         //a procura irá pra o nó indicado por i (Se possivel)
-        if( this->getPtr(i) != NULL && ((i < this->qtdInfos && this->getInfo(i)->compareTo(info) > 0) || i == this->qtdInfos ))
+        if( this->getPtr(i) != NULL && (
+            (i < this->qtdInfos && this->getInfo(i)->compareTo(info) > 0) || i == this->qtdInfos ))
         {
             NoDeArvoreNaria* no = this->getPtr(i); // vai para o nó em que a informacao pode estar
             no->exclua(info);
