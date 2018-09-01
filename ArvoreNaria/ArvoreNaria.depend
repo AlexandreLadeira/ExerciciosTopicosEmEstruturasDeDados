@@ -104,39 +104,41 @@
 1534344360 source:f:\1sextosemestre\ted\arvorenaria\src\nodearvorenaria.cpp
 	"NoDeArvoreNaria.h"
 
-1534418796 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\main.cpp
+1535028922 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\main.cpp
 	<iostream>
 	<MinhaInformacao.h>
 	<NoDeArvoreNaria.h>
 	<ArvoreNaria.h>
 
-1534418926 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\minhainformacao.h
+1534761688 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\minhainformacao.h
 	<InformacaoDeArvoreNaria.h>
 	<iostream>
 	<sstream>
 	<string.h>
 
-1534344300 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\informacaodearvorenaria.h
+1535026133 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\informacaodearvorenaria.h
 
-1534418950 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\nodearvorenaria.h
+1534761688 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\nodearvorenaria.h
 	<InformacaoDeArvoreNaria.h>
 	<stdlib.h>
 	<iostream>
+	<stdexcept>
 
-1534418908 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\arvorenaria.h
+1534761688 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\include\arvorenaria.h
 	<iostream>
+	<stdexcept>
 	"NoDeArvoreNaria.h"
 	"InformacaoDeArvoreNaria.h"
 
-1534357622 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\arvorenaria.cpp
+1534761688 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\arvorenaria.cpp
 	"ArvoreNaria.h"
 
 1534005866 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\informacaodearvorenaria.cpp
 
-1534358058 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\minhainformacao.cpp
+1534761688 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\minhainformacao.cpp
 	"MinhaInformacao.h"
 
-1534418836 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\nodearvorenaria.cpp
+1535029105 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\src\nodearvorenaria.cpp
 	"NoDeArvoreNaria.h"
 
 1534632915 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvorenaria\main.cpp

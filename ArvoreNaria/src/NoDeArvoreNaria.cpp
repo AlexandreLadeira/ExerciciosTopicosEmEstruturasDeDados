@@ -96,19 +96,19 @@ void NoDeArvoreNaria::inserirInformacao(InformacaoDeArvoreNaria* info)
 
 int NoDeArvoreNaria::procuraInformacao(InformacaoDeArvoreNaria* info)
 {
-    for(int i = 0; i < this->qtdInfos; i++)
+   /* for(int i = 0; i < this->qtdInfos; i++)
         if(this->vetInfo[i]->compareTo(info) == 0)
             return i;
 
-    return -1;
+    return -1; */
 
-   /* if(info == NULL)
+   if(info == NULL)
         throw invalid_argument("a informacao procurada nao pode ser nula");
 
     int incio,meio,fim;
 
     incio   = 0;
-    fim     = this->qtdInfos;
+    fim     = this->qtdInfos - 1;
 
 
     while(incio <= fim)
@@ -124,7 +124,7 @@ int NoDeArvoreNaria::procuraInformacao(InformacaoDeArvoreNaria* info)
             fim = meio -1;
     }
 
-    return -1; */
+    return -1;
 
 
 
@@ -202,8 +202,10 @@ void NoDeArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
                                                     // == 0; está nesse nó, logo precisamos remover dele.
                                                     // <  0; i fica com a qtdInfos; logo devemos procurar no vetPtr[i];
     if(!this->ehFolha())
-    {   //Essas duas coindicoes garantem que se a informacao nao está no nó atual, a procura irá pra o nó indicado por i (Se possivel)
-        if((i < this->qtdInfos && this->getInfo(i)->compareTo(info) > 0) || (i == this->qtdInfos && this->getPtr(i) != NULL))
+    {   //Essas duas coindicoes garantem que se a informacao nao está no nó atual,
+        //a procura irá pra o nó indicado por i (Se possivel)
+        if( this->getPtr(i) != NULL && (
+            (i < this->qtdInfos && this->getInfo(i)->compareTo(info) > 0) || i == this->qtdInfos ))
         {
             NoDeArvoreNaria* no = this->getPtr(i); // vai para o nó em que a informacao pode estar
             no->exclua(info);
@@ -232,8 +234,6 @@ void NoDeArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
                         }
                         this->vetInfo[j] = this->vetInfo[j - 1];
                     }
-
-
                 else // tem filho a direita, desloca para a esquerda
                     for(int j = i ; j <= this->qtdInfos ; j++)
                     {
@@ -243,8 +243,6 @@ void NoDeArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
                             break;
                         }
                         this->vetInfo[j] = this->vetInfo[j + 1];
-
-
                     }
             }
 
@@ -266,9 +264,12 @@ void NoDeArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
             */
 
         }
-    }
-    else if(this->vetInfo[i]->compareTo(info) == 0) // se está em um nó que é folha, só devemos excluir
-            this->removerInformacaoDaPosicao(i);
+    }       // se está em um nó que é folha, só devemos excluir
+    else if(this->getPtr(i) != NULL && this->vetInfo[i]->compareTo(info) == 0)
+                this->removerInformacaoDaPosicao(i);
+
+
+
 
 
 }
@@ -307,7 +308,7 @@ void NoDeArvoreNaria::montaOsArvore(ostream& os)
    os << "(";
 
    int i;
-   int j;
+
    for(i = 0; i < this->qtdInfos; i++)
     {
         if(this->getPtr(i) != NULL)
@@ -316,13 +317,10 @@ void NoDeArvoreNaria::montaOsArvore(ostream& os)
         os << " ";
         os << this->getInfo(i)->toString();
         os << " ";
-
-        if(this->getPtr(i + 1) != NULL)
-        {
-            this->getPtr(i + 1)->montaOsArvore(os);
-
-        }
     }
+
+    if(this->getPtr(this->n - 1) != NULL)
+        this->getPtr(this->n - 1)->montaOsArvore(os);
 
 
     os << ")";
@@ -332,9 +330,9 @@ ostream& operator<<(ostream& os, const NoDeArvoreNaria& no)
 {
     for(int i = 0;i < no.qtdInfos;i++)
     {
-        cout<<" ";
+        os<<" ";
         os << no.getInfo(i)->toString();
-        cout<<" ";
+        os<<" ";
     }
 
     return os;
