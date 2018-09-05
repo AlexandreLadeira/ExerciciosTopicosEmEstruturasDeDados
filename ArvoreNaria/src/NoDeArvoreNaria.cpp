@@ -267,6 +267,8 @@ void NoDeArvoreNaria::exclua(InformacaoDeArvoreNaria* info)
     }       // se está em um nó que é folha, só devemos excluir
     else if(this->getPtr(i) != NULL && this->vetInfo[i]->compareTo(info) == 0)
                 this->removerInformacaoDaPosicao(i);
+    else
+        throw invalid_argument("A informacao a ser excluida nao existe");
 
 
 

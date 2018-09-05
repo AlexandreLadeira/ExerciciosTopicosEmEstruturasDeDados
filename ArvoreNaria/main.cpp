@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 int main()
 {
 
@@ -19,8 +20,7 @@ int main()
         MinhaInformacao teste7(7);
         MinhaInformacao teste8(8);
         MinhaInformacao teste9(9);
-
-        ArvoreNaria arvore(3);
+        ArvoreNaria arvore(5);
 
         arvore.guarde(&teste0);
         arvore.guarde(&teste);
@@ -29,10 +29,11 @@ int main()
         arvore.guarde(&teste4);
         arvore.guarde(&teste5);
 
+
         cout << arvore;
 
         arvore.exclua(&teste2);
-        arvore.exclua(&teste2);
+      //  arvore.exclua(&teste2);
 
 
 
@@ -62,6 +63,7 @@ int main()
         }
         catch (invalid_argument err)
         {
+            cerr<< "\n";
             cerr << err.what();
         }
 
