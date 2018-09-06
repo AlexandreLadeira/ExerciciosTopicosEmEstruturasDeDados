@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1385313278 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\main.cpp
+	<iostream>
+
+1536238624 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\src\arvoreavl.cpp
+	"ArvoreAVL.h"
+
+1536238624 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\include\arvoreavl.h
+
+1536238855 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\src\informacaodearvoreavl.cpp
+	"InformacaoDeArvoreAVL.h"
+
+1536238867 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\include\informacaodearvoreavl.h
+
