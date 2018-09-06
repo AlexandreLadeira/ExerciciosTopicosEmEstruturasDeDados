@@ -138,23 +138,23 @@ void NoDeArvoreNaria::guarde(InformacaoDeArvoreNaria* info)
     if(this->procuraInformacao(info) >= 0)
         throw invalid_argument("Informacoes repetidas nao podem ser inseridas");
 
-    if(!this->haEspaco())
+    if(!this->haEspaco())//Deve achar ou criar um nó adequado para a inclusao
     {
-        if(info->compareTo(this->getInfo(0)) < 0)
-        {
+        if(info->compareTo(this->getInfo(0)) < 0)// se for menor que o primeiro
+        {   //Insere no mais a esquerda, se nao existir, cria.
             if(this->vetPtr[0] == NULL)
                 this->vetPtr[0] = new NoDeArvoreNaria(this->n);
 
             this->vetPtr[0]->guarde(info);
         }
-        else if(info->compareTo(this->getInfo(this->n - 2)) > 0)
-        {
+        else if(info->compareTo(this->getInfo(this->n - 2)) > 0) // se for maior que o ultimo
+        {   //Insere no mais a direita, se nao existir, cria
             if(this->vetPtr[n - 1] == NULL)
                 this->vetPtr[n - 1] = new NoDeArvoreNaria(this->n);
 
             this->vetPtr[n - 1]->guarde(info);
         }
-        else
+        else // se ha espaco no nó
         {
              int i = 0;
 
@@ -167,8 +167,6 @@ void NoDeArvoreNaria::guarde(InformacaoDeArvoreNaria* info)
                     this->vetPtr[i+1]->guarde(info);
                 }
         }
-
-
     }
     else
     {
@@ -290,7 +288,6 @@ bool NoDeArvoreNaria::escolherUmLado(unsigned int indice)
 void NoDeArvoreNaria::substituirInformacao(unsigned int indicePtr,unsigned int indiceInfo, unsigned int limite)
 {
     NoDeArvoreNaria* no = this->getPtr(indicePtr);
-
     //Pega a informação (maior ou menor, dependndo do indice e do limite).
     //Coloca ela por cima no vetInfo e exclui de sua posicao antiga
     InformacaoDeArvoreNaria* info = no->getInfo(limite);
@@ -312,14 +309,14 @@ void NoDeArvoreNaria::montaOsArvore(ostream& os)
    int i;
 
    for(i = 0; i < this->qtdInfos; i++)
-    {
-        if(this->getPtr(i) != NULL)
-            this->getPtr(i)->montaOsArvore(os);
+   {
+       if(this->getPtr(i) != NULL)
+           this->getPtr(i)->montaOsArvore(os);
 
-        os << " ";
-        os << this->getInfo(i)->toString();
-        os << " ";
-    }
+       os << " ";
+       os << this->getInfo(i)->toString();
+       os << " ";
+   }
 
     if(this->getPtr(this->n - 1) != NULL)
         this->getPtr(this->n - 1)->montaOsArvore(os);
