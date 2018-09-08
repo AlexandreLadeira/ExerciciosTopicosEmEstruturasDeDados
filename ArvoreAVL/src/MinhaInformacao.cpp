@@ -1,6 +1,5 @@
 #include "MinhaInformacao.h"
 
-
 MinhaInformacao::MinhaInformacao(int num)
 {
     this->meuNumero = num;
@@ -44,7 +43,3 @@ const char* MinhaInformacao::toString()
 
   return cadeia;
 }
-
-
-
-

@@ -1,14 +1,39 @@
 # depslib dependency file v1.0
-1385313278 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\main.cpp
+1536430676 source:e:\1-sextosemestre\ted\arvoreavl\main.cpp
 	<iostream>
-
-1536238624 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\src\arvoreavl.cpp
+	"MinhaInformacao.h"
 	"ArvoreAVL.h"
 
-1536238624 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\include\arvoreavl.h
+1536430634 source:e:\1-sextosemestre\ted\arvoreavl\src\arvoreavl.cpp
+	"ArvoreAVL.h"
 
-1536238855 source:c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\src\informacaodearvoreavl.cpp
+1536432226 e:\1-sextosemestre\ted\arvoreavl\include\arvoreavl.h
+	<iostream>
+	<stdexcept>
+	<stdlib.h>
+	"NoAVL.h"
 	"InformacaoDeArvoreAVL.h"
 
-1536238867 c:\users\u16159\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\include\informacaodearvoreavl.h
+1536427040 e:\1-sextosemestre\ted\arvoreavl\include\noavl.h
+	<iostream>
+	<stdlib.h>
+	<stdexcept>
+	"InformacaodeArvoreAVL.h"
+
+1536360782 e:\1-sextosemestre\ted\arvoreavl\include\informacaodearvoreavl.h
+
+1536360776 source:e:\1-sextosemestre\ted\arvoreavl\src\informacaodearvoreavl.cpp
+	"InformacaoDeArvoreAVL.h"
+
+1536361058 source:e:\1-sextosemestre\ted\arvoreavl\src\minhainformacao.cpp
+	"MinhaInformacao.h"
+
+1536361020 e:\1-sextosemestre\ted\arvoreavl\include\minhainformacao.h
+	<InformacaoDeArvoreAVL.h>
+	<iostream>
+	<sstream>
+	<string.h>
+
+1536427080 source:e:\1-sextosemestre\ted\arvoreavl\src\noavl.cpp
+	"NoAvl.h"
 

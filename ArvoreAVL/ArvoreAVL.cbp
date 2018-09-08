@@ -37,12 +37,12 @@
 		<Unit filename="include/ArvoreAVL.h" />
 		<Unit filename="include/InformacaoDeArvoreAVL.h" />
 		<Unit filename="include/MinhaInformacao.h" />
-		<Unit filename="include/NoAVL.h" />
+		<Unit filename="include/NOAVL.H" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ArvoreAVL.cpp" />
 		<Unit filename="src/InformacaoDeArvoreAVL.cpp" />
 		<Unit filename="src/MinhaInformacao.cpp" />
-		<Unit filename="src/NoAVL.cpp" />
+		<Unit filename="src/NOAVL.CPP" />
 		<Extensions>
 			<code_completion />
 			<envvars />

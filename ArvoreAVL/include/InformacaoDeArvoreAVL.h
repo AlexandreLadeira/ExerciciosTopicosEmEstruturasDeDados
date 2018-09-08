@@ -4,11 +4,13 @@
 
 class InformacaoDeArvoreAVL
 {
-    public:
+     public:
         virtual int compareTo(InformacaoDeArvoreAVL*){};
         virtual const char* toString(){};
 
+
     protected:
+
     private:
 };
 
