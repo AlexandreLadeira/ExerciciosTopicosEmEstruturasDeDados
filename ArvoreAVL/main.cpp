@@ -60,4 +60,13 @@ int main()
 
     cout << arvore;
 
+    cout << "\n-------------------------------\n";
+
+    arvore.excluir(&teste2);
+    arvore.excluir(&teste10);
+
+    cout << "\n-------------------------------\n";
+
+    cout << arvore;
+
 }

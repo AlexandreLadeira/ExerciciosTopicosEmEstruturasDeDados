@@ -37,3 +37,41 @@
 1536427080 source:e:\1-sextosemestre\ted\arvoreavl\src\noavl.cpp
 	"NoAvl.h"
 
+1536515556 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\main.cpp
+	<iostream>
+	"MinhaInformacao.h"
+	"ArvoreAVL.h"
+
+1536361020 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\include\minhainformacao.h
+	<InformacaoDeArvoreAVL.h>
+	<iostream>
+	<sstream>
+	<string.h>
+
+1536360782 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\include\informacaodearvoreavl.h
+
+1536432226 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\include\arvoreavl.h
+	<iostream>
+	<stdexcept>
+	<stdlib.h>
+	"NoAVL.h"
+	"InformacaoDeArvoreAVL.h"
+
+1536427040 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\include\noavl.h
+	<iostream>
+	<stdlib.h>
+	<stdexcept>
+	"InformacaodeArvoreAVL.h"
+
+1536360776 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\src\informacaodearvoreavl.cpp
+	"InformacaoDeArvoreAVL.h"
+
+1536361058 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\src\minhainformacao.cpp
+	"MinhaInformacao.h"
+
+1536427080 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\src\noavl.cpp
+	"NoAvl.h"
+
+1536432624 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\src\arvoreavl.cpp
+	"ArvoreAVL.h"
+
