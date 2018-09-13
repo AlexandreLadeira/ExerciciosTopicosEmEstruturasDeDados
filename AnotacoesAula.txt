@@ -1,1 +1,38 @@
-Classe AVL = Inserir, Remover, << e tem.
+_______13/09/2018
+Arvore AVL em disco: 
+
+Aluno : ra, nome. 
+
+
+
+------ 
+Incluir larissa: 
+
+	Ra	Nome
+0	16184   Larissa 
+1	16162   Bruna
+
+IdXra
+	Esq|RA   |Dir|Dados(Em qual linha está) 	
+0	1  |16184|-1 |0
+1	-1 |16162|-1 |1 
+
+//Incluir na tabela de dados é sequencial, mas na hora que for fazer a inclusão na arvore estarão organizadas.
+
+//A tabela alunos está em uma arquivo 
+//A arvore está em outro arquivo, não na memória.
+
+//Detalhes -> declarar uma struct com ra e nome, struct com esqrd,ra,dir dados.
+//ou fazer a api para qualquer tipo de arquivo, como ter qualque informação sobre arquivo, tipo 
+//qos byte ocupa cada tipo, qtos bytes de informacao ocupa a chave
+
+//DICA importante: 
+//Excluir -> nao exluir de fato, só marcar para exclusão e manter uma lista de disponíveis
+	antes de comecar os alunos tem um registro(lista) especial que diz sobre os disponiveis 
+	inicio de lista. Na hora que for incluir reaproveita um indice da lista de disponiveis. 
+	Talvez no arquivo de indice colocar uma raiz e o inicio da lista de disponiveis
+	
+
+
+ 
+
