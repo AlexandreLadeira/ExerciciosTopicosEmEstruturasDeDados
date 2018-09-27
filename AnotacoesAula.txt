@@ -31,6 +31,36 @@ IdXra
 	antes de comecar os alunos tem um registro(lista) especial que diz sobre os disponiveis 
 	inicio de lista. Na hora que for incluir reaproveita um indice da lista de disponiveis. 
 	Talvez no arquivo de indice colocar uma raiz e o inicio da lista de disponiveis
+_______27/09/2018 
+Matriz esparsa 
+
+Arvore avl que guarda linhas, dentro de cada nó existe outra arvore avl. 
+
+pra procurar, pega a linha e acha na arvore maior, quando achar o nó entra na arvore do no e procura
+a coluna, Quando achar junto vai estar a coluna. 
+
+Detalahes = pode acontecer de procurarmos uma linha ou coluna e ela não existir, então o retorno é 
+o valor padrão (provavelmente falso). 
+
+Quando não existe nenhuma conexão pode apagar (quando guarda falso). 
+Insere quando o valor não existe e remove quando insere valor padrão 
+
+
+Trabalho: 
+	Fazer um classe matriz esparsa
+		ArvoreAvl de linhas, // cada nó possui uma arvore avle de colunas  
+		valor padrão //
+		
+		get(linha,coluna)
+		put(linha,coluna,valor)
+		construtor(valorPadrao)
+	// valor e valor padrão serão ponteiro de uma classe info (para poder colocar 
+	//qualquer coisa), nao precisa ser comparable. 
+
+	//linha coluna serão unsigned long int 
+
+	Teremos tb uma classe 
+		
 	
 
 
