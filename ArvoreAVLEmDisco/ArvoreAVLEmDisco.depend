@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1538231071 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\main.cpp
+	<fstream>
+	<iostream>
+	"ArvoreAVLEmDisco.h"
+	<vector>
+	"Aluno.h"
+
+1538227045 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\src\arvoreavlemdisco.cpp
+	"ArvoreAVLEmDisco.h"
+
+1538231373 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\include\arvoreavlemdisco.h
+	"Aluno.h"
+	"No.h"
+
+1538231274 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\include\aluno.h
+
+1538229064 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\include\no.h
+
