@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1538242730 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\main.cpp
+	<iostream>
+	"ArvoreAVL.h"
+	"Info.h"
+	"MinhaInformacao.h"
+	"MatrizEsparsa.h"
+
+1538239125 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\arvoreavl.h
+	<iostream>
+	<stdexcept>
+	<stdlib.h>
+	"NoAVL.h"
+	"InformacaoDeArvoreAVL.h"
+
+1536427040 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\noavl.h
+	<iostream>
+	<stdlib.h>
+	<stdexcept>
+	"InformacaodeArvoreAVL.h"
+
+1536360782 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\informacaodearvoreavl.h
+
+1538241684 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\arvoreavl.cpp
+	"ArvoreAVL.h"
+
+1538242439 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\coluna.cpp
+	"Coluna.h"
+
+1538239973 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\coluna.h
+	"ArvoreAVL.h"
+	"Info.h"
+
+1538234429 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\info.cpp
+	"Info.h"
+
+1538234503 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\info.h
+
+1536360776 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\informacaodearvoreavl.cpp
+	"InformacaoDeArvoreAVL.h"
+
+1538241979 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\matrizesparsa.cpp
+	"MatrizEsparsa.h"
+
+1538237106 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\matrizesparsa.h
+	"ArvoreAVL.h"
+	"Info.h"
+	"Linha.h"
+	"Coluna.h"
+
+1536361058 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\minhainformacao.cpp
+	"MinhaInformacao.h"
+
+1536361020 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\minhainformacao.h
+	<InformacaoDeArvoreAVL.h>
+	<iostream>
+	<sstream>
+	<string.h>
+
+1536427080 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\noavl.cpp
+	"NoAvl.h"
+
+1538243330 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\linha.cpp
+	"Linha.h"
+
+1538243298 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\linha.h
+	<iostream>
+	<stdexcept>
+	<stdlib.h>
+	"ArvoreAVL.h"
+	"Coluna.h"
+

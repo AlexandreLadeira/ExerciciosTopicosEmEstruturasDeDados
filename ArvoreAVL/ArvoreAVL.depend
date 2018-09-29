@@ -37,7 +37,7 @@
 1536427080 source:e:\1-sextosemestre\ted\arvoreavl\src\noavl.cpp
 	"NoAvl.h"
 
-1536515556 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\main.cpp
+1538239376 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\main.cpp
 	<iostream>
 	"MinhaInformacao.h"
 	"ArvoreAVL.h"
@@ -50,7 +50,7 @@
 
 1536360782 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\include\informacaodearvoreavl.h
 
-1536432226 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\include\arvoreavl.h
+1538239125 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\include\arvoreavl.h
 	<iostream>
 	<stdexcept>
 	<stdlib.h>
@@ -72,6 +72,6 @@
 1536427080 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\src\noavl.cpp
 	"NoAvl.h"
 
-1536432624 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\src\arvoreavl.cpp
+1538239474 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavl\src\arvoreavl.cpp
 	"ArvoreAVL.h"
 

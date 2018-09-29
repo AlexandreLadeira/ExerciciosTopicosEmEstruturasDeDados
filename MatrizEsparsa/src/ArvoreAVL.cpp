@@ -68,6 +68,7 @@ void ArvoreAVL::inserir(InformacaoDeArvoreAVL * novaInfo)
 
   }
 
+
 }
 
 NoAVL * ArvoreAVL::inserir(NoAVL * no, InformacaoDeArvoreAVL * novaInfo)

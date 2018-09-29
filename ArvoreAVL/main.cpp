@@ -69,4 +69,9 @@ int main()
 
     cout << arvore;
 
+    MinhaInformacao * pegou = (MinhaInformacao*)arvore.get(&teste1);
+
+    cout << "\n";
+    cout << pegou->toString();
+
 }

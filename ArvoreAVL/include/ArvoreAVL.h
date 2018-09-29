@@ -17,11 +17,13 @@ class ArvoreAVL
         void excluir(InformacaoDeArvoreAVL*);
 
         bool tem(InformacaoDeArvoreAVL *);
+        InformacaoDeArvoreAVL * get(InformacaoDeArvoreAVL *);
 
         friend ostream& operator<< (ostream&, const ArvoreAVL&);
 
     private:
         bool tem(NoAVL *, InformacaoDeArvoreAVL *);
+        InformacaoDeArvoreAVL * get(NoAVL*,InformacaoDeArvoreAVL *);
 
         NoAVL * inserir(NoAVL *, InformacaoDeArvoreAVL *);
         NoAVL * excluir(NoAVL *, InformacaoDeArvoreAVL *);
