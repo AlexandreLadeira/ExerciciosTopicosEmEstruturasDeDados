@@ -4,23 +4,25 @@
 #include "ArvoreAVL.h"
 #include "Info.h"
 
-class Coluna : public InformacaoDeArvoreAVL
+template <class T>
+class Coluna
 {
     public:
-        Coluna(unsigned int, InformacaoDeArvoreAVL *);
+        Coluna(unsigned int, T);
 
-        unsigned int getValor();
-        InformacaoDeArvoreAVL * getInformacao();
+        unsigned int getIndice();
+        T getInformacao();
 
 
-        int compareTo(InformacaoDeArvoreAVL*);
+        int compareTo(T*);
         const char* toString();
 
     protected:
 
     private:
-        unsigned int valor;
-        InformacaoDeArvoreAVL * informacao;
+        unsigned int indice;
+        T informacao;
 };
+#include "Coluna.cpp"
 
 #endif // COLUNA_H

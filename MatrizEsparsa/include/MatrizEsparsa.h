@@ -5,21 +5,24 @@
 #include "Linha.h"
 #include "Coluna.h"
 
+template <class T>
 
 class MatrizEsparsa
 {
     public:
-        MatrizEsparsa(InformacaoDeArvoreAVL*);
+        MatrizEsparsa(T);
 
-        InformacaoDeArvoreAVL* get(unsigned int,unsigned int);
-        bool  put(unsigned int,unsigned int,InformacaoDeArvoreAVL*);
+        T get(unsigned int,unsigned int);
+        void  put( int, int,T);
 
     protected:
 
     private:
-        ArvoreAVL linhas;
-        InformacaoDeArvoreAVL * padrao;
+        ArvoreAVL<Linha<T> >* linhas;
+        T  padrao;
 
 };
+
+#include "MatrizEsparsa.cpp"
 
 #endif // MATRIZESPARSA_H

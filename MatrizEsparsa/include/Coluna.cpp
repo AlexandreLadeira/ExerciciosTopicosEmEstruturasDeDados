@@ -1,20 +1,25 @@
-#include "Coluna.h"
 
-Coluna::Coluna(unsigned int valor, InformacaoDeArvoreAVL * info)
+template <class T>
+Coluna<T>::Coluna(unsigned int i, T info)
 {
-    this->valor = valor;
+    this->indice = i;
     this->informacao = info;
 }
-unsigned int Coluna::getValor()
+
+template <class T>
+unsigned int Coluna<T>::getIndice()
 {
-    return this->valor;
+    return this->indice;
 }
-InformacaoDeArvoreAVL * Coluna::getInformacao()
+
+template <class T>
+T  Coluna<T>::getInformacao()
 {
     return this->informacao;
 }
 
-int Coluna::compareTo(InformacaoDeArvoreAVL * informacao)
+template <class T>
+int Coluna<T>::compareTo(T * informacao)
 {
  if(informacao == NULL)
        throw invalid_argument("A linha nao pode ser nula para comparar");
@@ -30,7 +35,8 @@ int Coluna::compareTo(InformacaoDeArvoreAVL * informacao)
     return 0;
 }
 
-const char* Coluna::toString()
+template <class T>
+const char* Coluna<T>::toString()
 {
   return this->informacao->toString();
 }

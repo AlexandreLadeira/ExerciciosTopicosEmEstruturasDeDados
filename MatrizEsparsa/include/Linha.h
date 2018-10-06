@@ -10,29 +10,31 @@
 
 
 using namespace std;
+template <class T>
 
-class Linha : public InformacaoDeArvoreAVL
+class Linha
 {
     public:
-        Linha(unsigned int valor);
+        Linha(unsigned int);
 
-        unsigned int getValor();
-        Coluna * getColuna(unsigned int);
+        unsigned int getIndice();
+        Coluna<T> * getColuna(unsigned int);
+        ArvoreAVL<T> * getColunas();
 
-        bool insereColuna(unsigned int,InformacaoDeArvoreAVL*);
+        bool insereColuna(unsigned int,T);
         bool excluiColuna(unsigned int);
         bool temColuna(int c);
 
-        int compareTo(InformacaoDeArvoreAVL*);
-        const char* toString();
+
 
     protected:
 
     private:
-        unsigned int valor;
-        ArvoreAVL colunas;
+        unsigned int indice;
+        ArvoreAVL<T>* colunas;
 
 
 };
 
+#include "Linha.cpp"
 #endif // LINHA_H

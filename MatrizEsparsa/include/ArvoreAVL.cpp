@@ -1,69 +1,77 @@
-#include "ArvoreAVL.h"
 
-ArvoreAVL::ArvoreAVL()
+template <class T>
+ArvoreAVL<T>::ArvoreAVL()
 {
     this->raiz = NULL;
     this->qtdNos = 0;
 }
 
-bool ArvoreAVL::tem(InformacaoDeArvoreAVL * procurada)
+template <class T>
+bool ArvoreAVL<T>::tem(int chave)
 {
-   return this->tem(this->raiz,procurada);
+   return this->tem(this->raiz,chave);
 }
 
-bool ArvoreAVL::tem(NoAVL * no, InformacaoDeArvoreAVL * procurada)
+template <class T>
+bool  ArvoreAVL<T>::tem(NoAVL<T> * no, int chaveProcurada)
 {
     if(no == NULL)
         return false;
 
-    int comparacao = no->getInfo()->compareTo(procurada);
-
     // A info do no é maior, portanto deve ir para esquerda
-    if(comparacao > 0)
-        return this->tem(no->getEsquerda(), procurada);
+    if(no->getChave() > chaveProcurada)
+        return this->tem(no->getEsquerda(), chaveProcurada);
 
     // A info do no é menor, portanto deve ir para direita
-    if(comparacao < 0)
-        return this->tem(no->getDireita(),procurada);
+    if(no->getChave() < chaveProcurada)
+        return this->tem(no->getDireita(),chaveProcurada);
 
     //encontrou
     return true;
 
 }
 
-InformacaoDeArvoreAVL * ArvoreAVL::get(InformacaoDeArvoreAVL * procurada)
+template <class T>
+T* ArvoreAVL<T>::get(int chaveProcurada)
 {
-    return this->get(this->raiz,procurada);
+    return this->get(this->raiz,chaveProcurada);
 }
 
-InformacaoDeArvoreAVL * ArvoreAVL::get(NoAVL * no,InformacaoDeArvoreAVL * procurada)
+template <class T>
+T * ArvoreAVL<T>::get(NoAVL<T> * no,int chaveProcurada)
 {
     if(no == NULL)
         return NULL;
 
-    int comparacao = no->getInfo()->compareTo(procurada);
 
     // A info do no é maior, portanto deve ir para esquerda
-    if(comparacao > 0)
-        return this->get(no->getEsquerda(), procurada);
+    if(no->getChave() > chaveProcurada)
+        return this->get(no->getEsquerda(), chaveProcurada);
 
     // A info do no é menor, portanto deve ir para direita
-    if(comparacao < 0)
-        return this->get(no->getDireita(),procurada);
+    if(no->getChave() < chaveProcurada)
+        return this->get(no->getDireita(),chaveProcurada);
 
     //encontrou
     return no->getInfo();
 }
 
-void ArvoreAVL::inserir(InformacaoDeArvoreAVL * novaInfo)
+template <class T>
+int ArvoreAVL<T>::getQtdNos()
+{
+   return this->qtdNos;
+}
+
+template <class T>
+void ArvoreAVL<T>::inserir(int chave,T * novaInfo)
 {
 
   if(novaInfo == NULL)
     throw invalid_argument("A informacao a ser inserida nao pode ser nula");
 
-  if(!this->tem(this->raiz,novaInfo))
+  if(!this->tem(this->raiz,chave))
   {
-      this->raiz = this->inserir(this->raiz,novaInfo);
+      this->raiz = this->inserir(this->raiz,novaInfo,chave);
       this->qtdNos++;
 
   }
@@ -71,19 +79,20 @@ void ArvoreAVL::inserir(InformacaoDeArvoreAVL * novaInfo)
 
 }
 
-NoAVL * ArvoreAVL::inserir(NoAVL * no, InformacaoDeArvoreAVL * novaInfo)
+template <class T>
+NoAVL<T> * ArvoreAVL<T>::inserir(NoAVL<T> * no, T * novaInfo, int chave)
 {
     // Fim da recursão, só cria um novo nó com a novaInfo
     if(no == NULL)
     {
-         return new NoAVL(novaInfo);
+         return new NoAVL<T>(chave,novaInfo);
     }
 
     //Se a nova info for menor dever inserir a esquerda
-    if(novaInfo->compareTo(no->getInfo()) < 0)
-        no->setEsquerda(this->inserir(no->getEsquerda(),novaInfo));
+    if(chave < no->getChave())
+        no->setEsquerda(this->inserir(no->getEsquerda(),novaInfo,chave));
     else//insere na direita
-        no->setDireita(this->inserir(no->getDireita(),novaInfo));
+        no->setDireita(this->inserir(no->getDireita(),novaInfo,chave));
 
     //Mantendo o nó com altura e equilibrio corretos e
     //balanceando a arvore
@@ -92,32 +101,34 @@ NoAVL * ArvoreAVL::inserir(NoAVL * no, InformacaoDeArvoreAVL * novaInfo)
     return this->balancear(no);
 }
 
-void ArvoreAVL::excluir(InformacaoDeArvoreAVL * info)
+template <class T>
+void ArvoreAVL<T>::excluir(int chave)
 {
-    if(info == NULL)
-        throw invalid_argument("A informacao a asr excluida nao pode ser nula");
+  //  if(chave == NULL)
+  //      throw invalid_argument("A informacao a asr excluida nao pode ser nula");
 
-    if(tem(this->raiz,info))
+    if(tem(this->raiz,chave))
     {
-        this->raiz = excluir(this->raiz,info);
+        this->raiz = excluir(this->raiz,chave);
         this->qtdNos--;
     }
 }
 
-NoAVL * ArvoreAVL::excluir(NoAVL * no, InformacaoDeArvoreAVL * info)
+template <class T>
+NoAVL<T> * ArvoreAVL<T>::excluir(NoAVL<T> * no, int chave)
 {
     //Fim da recursão, devolve nulo para exlcuir o nó que chamou
     if(no == NULL)
         return NULL;
 
-    int comparacao = info->compareTo(no->getInfo());
+
 
     //Está mais a esquerda.
-    if(comparacao < 0)
-        no->setEsquerda(this->excluir(no->getEsquerda(),info));
+    if(no->getChave() < chave)
+        no->setEsquerda(this->excluir(no->getEsquerda(),chave));
     // está mais a direita
-    else if(comparacao > 0)
-        no->setDireita(this->excluir(no->getDireita(),info));
+    else if(no->getChave() > chave)
+        no->setDireita(this->excluir(no->getDireita(),chave));
     // O nó foi encontrado e n tem subavore a esquerda.
     else if(no->getEsquerda() == NULL)
         return no->getDireita();//Troca o nó que queremos excluir com o da direita
@@ -130,17 +141,21 @@ NoAVL * ArvoreAVL::excluir(NoAVL * no, InformacaoDeArvoreAVL * info)
         if(no->getEsquerda()->getAltura() > no->getDireita()->getAltura())
         {
             //Acha e troca o valor do nó com o Maior valor da arvore a esquerda
-            InformacaoDeArvoreAVL * substituto = this->getMaiorInfo(no->getEsquerda());
+            T * substituto = this->getMaiorInfo(no->getEsquerda());
+            int chaveSubstituto = this->getMaiorChave(no->getEsquerda());
             no->setInfo(substituto);
+            no->setChave(chaveSubstituto);
 
-            no->setEsquerda(this->excluir(no->getEsquerda(),substituto));
+            no->setEsquerda(this->excluir(no->getEsquerda(),chaveSubstituto));
         }
         else
         {
             //Acha e troca o valor do nó com o Maior valor da arvore a direita
-            InformacaoDeArvoreAVL * substituto = this->getMenorInfo(no->getDireita());
+            T * substituto = this->getMenorInfo(no->getDireita());
+            int chaveSubstituto = this->getMenorChave(no->getDireita());
             no->setInfo(substituto);
-            no->setDireita(this->excluir(no->getDireita(),substituto));
+            no->setChave(chaveSubstituto);
+            no->setDireita(this->excluir(no->getDireita(),chaveSubstituto));
         }
     }
 
@@ -152,8 +167,9 @@ NoAVL * ArvoreAVL::excluir(NoAVL * no, InformacaoDeArvoreAVL * info)
 
 }
 
+template <class T>
 //Retorna a maior info da arvore apontada pelo no
-InformacaoDeArvoreAVL * ArvoreAVL::getMaiorInfo(NoAVL * no)
+T * ArvoreAVL<T>::getMaiorInfo(NoAVL<T> * no)
 {
     while(no->getDireita() != NULL)
         no = no->getDireita();
@@ -161,8 +177,10 @@ InformacaoDeArvoreAVL * ArvoreAVL::getMaiorInfo(NoAVL * no)
     return no->getInfo();
 }
 
+
+template <class T>
 //Retorna a menor info da arvore apontada pelo no
-InformacaoDeArvoreAVL * ArvoreAVL::getMenorInfo(NoAVL * no)
+T * ArvoreAVL<T>::getMenorInfo(NoAVL<T> * no)
 {
      while(no->getEsquerda() != NULL)
         no = no->getEsquerda();
@@ -170,8 +188,30 @@ InformacaoDeArvoreAVL * ArvoreAVL::getMenorInfo(NoAVL * no)
     return no->getInfo();
 }
 
+template <class T>
+//Retorna a maior info da arvore apontada pelo no
+int ArvoreAVL<T>::getMaiorChave(NoAVL<T> * no)
+{
+    while(no->getDireita() != NULL)
+        no = no->getDireita();
 
-void ArvoreAVL::atualizaEquilibrioAltura(NoAVL * no)
+    return no->getChave();
+}
+
+
+template <class T>
+//Retorna a menor info da arvore apontada pelo no
+int ArvoreAVL<T>::getMenorChave(NoAVL<T> * no)
+{
+     while(no->getEsquerda() != NULL)
+        no = no->getEsquerda();
+
+    return no->getChave();
+}
+
+
+template <class T>
+void ArvoreAVL<T>::atualizaEquilibrioAltura(NoAVL<T> * no)
 {
     //Inicialização.
     int alturaEsquerda = -1;
@@ -194,8 +234,9 @@ void ArvoreAVL::atualizaEquilibrioAltura(NoAVL * no)
 
 }
 
+template <class T>
 //Balancei a arvore seguindo o paradigma de uma arvore AVL
-NoAVL * ArvoreAVL::balancear(NoAVL * no)
+NoAVL<T> * ArvoreAVL<T>::balancear(NoAVL<T> * no)
 {
     int equilibrio = no->getEquilibrio();
 
@@ -214,10 +255,11 @@ NoAVL * ArvoreAVL::balancear(NoAVL * no)
 
 }
 
-NoAVL* ArvoreAVL::rotacaoParaEsquerda(NoAVL * raiz)
+template <class T>
+NoAVL<T>* ArvoreAVL<T>::rotacaoParaEsquerda(NoAVL<T> * raiz)
 {
     //Filho da direita vira nova raiz
-    NoAVL * novaRaiz = raiz->getDireita();
+    NoAVL<T> * novaRaiz = raiz->getDireita();
     //O filho da esquerda da nova raiz vira o filho da direita da raiz original
     raiz->setDireita(novaRaiz->getEsquerda());
     //A raiz original vira o filha da esquerda da nova raiz
@@ -229,10 +271,11 @@ NoAVL* ArvoreAVL::rotacaoParaEsquerda(NoAVL * raiz)
     return novaRaiz;
 }
 
-NoAVL * ArvoreAVL::rotacaoParaDireita(NoAVL * raiz)
+template <class T>
+NoAVL<T> * ArvoreAVL<T>::rotacaoParaDireita(NoAVL<T> * raiz)
 {
     //Filho da esquerda vira nova raiz
-    NoAVL * novaRaiz = raiz->getEsquerda();
+    NoAVL<T> * novaRaiz = raiz->getEsquerda();
     //O filho da direta da nova raiz vira o filho da esquerda da raiz original
     raiz->setEsquerda(novaRaiz->getDireita());
     //A raiz original vira o filha da direita da nova raiz
@@ -245,7 +288,8 @@ NoAVL * ArvoreAVL::rotacaoParaDireita(NoAVL * raiz)
 
 }
 
-NoAVL * ArvoreAVL::rotacaoDuplaParaEsquerda(NoAVL * raiz)
+template <class T>
+NoAVL<T>* ArvoreAVL<T>::rotacaoDuplaParaEsquerda(NoAVL<T> * raiz)
 {
     //Rotacionando para direita a subarvore da direita
     raiz->setDireita(rotacaoParaDireita(raiz->getDireita()));
@@ -254,7 +298,8 @@ NoAVL * ArvoreAVL::rotacaoDuplaParaEsquerda(NoAVL * raiz)
 
 }
 
-NoAVL * ArvoreAVL::rotacaoDuplaParaDireita(NoAVL * raiz)
+template <class T>
+NoAVL<T> * ArvoreAVL<T>::rotacaoDuplaParaDireita(NoAVL<T> * raiz)
 {
     //Rotacionando para esquerda a subarvore da esquerda
     raiz->setEsquerda(rotacaoParaEsquerda(raiz->getEsquerda()));
@@ -262,9 +307,29 @@ NoAVL * ArvoreAVL::rotacaoDuplaParaDireita(NoAVL * raiz)
     return rotacaoParaDireita(raiz);
 }
 
+template <class T>
+void ArvoreAVL<T>::printa()
+{
+    this->printa(this->raiz);
+}
+
+template <class T>
+void ArvoreAVL<T>::printa(NoAVL<T>* no)
+{
+
+    if(no != NULL)
+    {
+    printa(no->getEsquerda());
+    cout << no->getChave();
+    printa(no->getDireita());
+    }
+
+}
+
+template <class T>
 //Código traduzido do ingles para pt-br. Origem:
 //https://stackoverflow.com/questions/41091382/how-to-print-in-console-a-tree-horizontally-with-links-using-c
-void ArvoreAVL::desenhaArvore(NoAVL *no, int profundidade, char *caminho, int direita,ostream& os) const
+void ArvoreAVL<T>::desenhaArvore(NoAVL<T> *no, int profundidade, char *caminho, int direita,ostream& os) const
 {
     // fim da recursao
     if (no== NULL)
@@ -304,7 +369,7 @@ void ArvoreAVL::desenhaArvore(NoAVL *no, int profundidade, char *caminho, int di
           os <<("-");
     }
 
-    os << ("%s\n",no->getInfo()->toString());
+    os << ("%s\n",no->getChave());
 
 
 
@@ -325,8 +390,8 @@ void ArvoreAVL::desenhaArvore(NoAVL *no, int profundidade, char *caminho, int di
 
 }
 
-
-void ArvoreAVL::desenhaArvore(ostream& os) const
+template <class T>
+void ArvoreAVL<T>::desenhaArvore(ostream& os) const
 {
 
     char path[255] = {};
@@ -335,9 +400,8 @@ void ArvoreAVL::desenhaArvore(ostream& os) const
     desenhaArvore(this->raiz, 0, path, 0,os);
 }
 
-
-
-ostream& operator << (ostream& os, const ArvoreAVL& arv)
+template <class T>
+ostream& operator << (ostream& os, const ArvoreAVL<T>& arv)
 {
     if(arv.raiz != NULL)
         arv.desenhaArvore(os);

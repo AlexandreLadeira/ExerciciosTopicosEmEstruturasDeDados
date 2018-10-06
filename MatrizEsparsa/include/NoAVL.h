@@ -7,30 +7,34 @@
 #include "InformacaodeArvoreAVL.h"
 
 using namespace std;
-
+template <class T>
 class NoAVL
 {
     public:
-        NoAVL(InformacaoDeArvoreAVL * );
+        NoAVL(int,T *);
 
-        NoAVL * getDireita();
-        NoAVL * getEsquerda();
+        NoAVL<T> * getDireita();
+        NoAVL<T> * getEsquerda();
         int getEquilibrio();
         int getAltura();
-        InformacaoDeArvoreAVL * getInfo();
+        T * getInfo();
+        int getChave();
 
         void setDireita(NoAVL *);
         void setEsquerda(NoAVL *);
         void setEqulibrio(int);
         void setAltura(int);
-        void setInfo(InformacaoDeArvoreAVL *);
+        void setInfo(T *);
+        void setChave(int);
 
     private:
-        NoAVL * direita;
-        NoAVL * esquerda;
+        NoAVL<T> * direita;
+        NoAVL<T> * esquerda;
         int equilibrio;
         int altura;
-        InformacaoDeArvoreAVL * info;
+        T * info;
+        int chave;
 };
 
+#include "NoAVL.cpp"
 #endif // NoAVL_H

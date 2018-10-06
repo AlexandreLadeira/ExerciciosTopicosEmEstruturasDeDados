@@ -34,23 +34,31 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/ArvoreAVL.cpp">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="include/ArvoreAVL.h" />
+		<Unit filename="include/Coluna.cpp">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="include/Coluna.h" />
-		<Unit filename="include/Info.h" />
+		<Unit filename="include/InformacaoDeArvoreAVL.cpp" />
 		<Unit filename="include/InformacaoDeArvoreAVL.h" />
+		<Unit filename="include/Linha.cpp">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="include/Linha.h" />
+		<Unit filename="include/MatrizEsparsa.cpp">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="include/MatrizEsparsa.h" />
+		<Unit filename="include/MinhaInformacao.cpp" />
 		<Unit filename="include/MinhaInformacao.h" />
+		<Unit filename="include/NoAVL.cpp">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="include/NoAVL.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/ArvoreAVL.cpp" />
-		<Unit filename="src/Coluna.cpp" />
-		<Unit filename="src/Info.cpp" />
-		<Unit filename="src/InformacaoDeArvoreAVL.cpp" />
-		<Unit filename="src/Linha.cpp" />
-		<Unit filename="src/MatrizEsparsa.cpp" />
-		<Unit filename="src/MinhaInformacao.cpp" />
-		<Unit filename="src/NoAVL.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
