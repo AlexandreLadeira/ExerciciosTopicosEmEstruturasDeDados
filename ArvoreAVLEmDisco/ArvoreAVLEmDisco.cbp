@@ -36,6 +36,7 @@
 		</Compiler>
 		<Unit filename="include/Aluno.h" />
 		<Unit filename="include/ArvoreAVLEmDisco.h" />
+		<Unit filename="include/Indice.h" />
 		<Unit filename="include/No.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ArvoreAVLEmDisco.cpp" />

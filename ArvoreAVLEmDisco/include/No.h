@@ -1,9 +1,9 @@
-#ifndef ALUNO_HPP
-#define ALUNO_HPP
+#ifndef NO_HPP
+#define NO_HPP
 
 using namespace std;
 
-typedef struct no
+typedef struct No
 {
     int esquerda;
     int ra;
