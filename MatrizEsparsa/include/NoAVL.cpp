@@ -1,7 +1,7 @@
 
 
 template <class T>
-NoAVL<T>::NoAVL(int chave, T * info)
+NoAVL<T>::NoAVL(int chave, T* info)
 {
    this->info = info;
    this->altura     = 0;

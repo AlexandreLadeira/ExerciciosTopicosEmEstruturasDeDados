@@ -1,7 +1,6 @@
 #ifndef MATRIZESPARSA_H
 #define MATRIZESPARSA_H
 #include "ArvoreAVL.h"
-#include "Info.h"
 #include "Linha.h"
 #include "Coluna.h"
 

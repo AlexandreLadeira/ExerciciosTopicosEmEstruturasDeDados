@@ -2,8 +2,9 @@
 template <class T>
 Coluna<T>::Coluna(unsigned int i, T info)
 {
+    T* clone = new T(info);
     this->indice = i;
-    this->informacao = info;
+    this->informacao = clone;
 }
 
 template <class T>
@@ -15,7 +16,7 @@ unsigned int Coluna<T>::getIndice()
 template <class T>
 T  Coluna<T>::getInformacao()
 {
-    return this->informacao;
+    return *this->informacao;
 }
 
 template <class T>

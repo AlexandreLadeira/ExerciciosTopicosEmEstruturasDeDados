@@ -2,7 +2,6 @@
 #define COLUNA_H
 
 #include "ArvoreAVL.h"
-#include "Info.h"
 
 template <class T>
 class Coluna
@@ -21,7 +20,7 @@ class Coluna
 
     private:
         unsigned int indice;
-        T informacao;
+        T* informacao;
 };
 #include "Coluna.cpp"
 

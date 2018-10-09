@@ -1,6 +1,5 @@
 #include <iostream>
 #include "ArvoreAVL.h"
-#include "Info.h"
 #include "MinhaInformacao.h"
 #include "MatrizEsparsa.h"
 
@@ -16,10 +15,11 @@ int main()
     MatrizEsparsa<int>* matriz = new MatrizEsparsa<int>(0);
 
     matriz->put(1,1,5);
-    matriz->put(3,7,8);
+    matriz->put(3,7,7);
     matriz->put(2,1,8);
 
-    matriz->put(1,1,7);
+    //matriz->put(1,1,7);
+    cout << matriz->get(2, 1);
    // int numero = matriz->get(1,1);
 
    // cout << numero;

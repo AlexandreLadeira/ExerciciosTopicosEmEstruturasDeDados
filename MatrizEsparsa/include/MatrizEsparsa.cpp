@@ -16,11 +16,11 @@ T  MatrizEsparsa<T>::get(unsigned int linha, unsigned int coluna)
     if(linhaProcurada != NULL)
     {
         //pega a coluna indicada pelo parametro
-        Coluna<T> * colunaProcurada = linhaProcurada->getColuna(coluna);
+        T* informacaoProcurada = linhaProcurada->getColunas()->get(coluna);
 
         //se ela existir retorna sua informacao
-        if(colunaProcurada != NULL)
-            return colunaProcurada->getInformacao();
+        if(informacaoProcurada != NULL)
+            return *informacaoProcurada;
     }
 
     //Se a linha nao existir, ou a coluna nao existir retona NULL
@@ -31,7 +31,8 @@ T  MatrizEsparsa<T>::get(unsigned int linha, unsigned int coluna)
 template <class T>
 void MatrizEsparsa<T>::put(int l,int c, T  informacao)
 {
-  Linha<T> linha(l);
+  Linha<T>* linha = new Linha<T>(l);
+  T* clone = new T(informacao);
 
   if(informacao == this->padrao)
   {
@@ -53,8 +54,8 @@ void MatrizEsparsa<T>::put(int l,int c, T  informacao)
   {
       if(!linhas->tem(l))
       { // se a linha nao existe na arvore, insere ela junto com a coluna
-        linha.getColunas()->inserir(c,&informacao);
-        linhas->inserir((int)l,&linha);
+        linha->getColunas()->inserir(c, clone);
+        linhas->inserir((int)l, linha);
       }
       else
       {
@@ -65,7 +66,7 @@ void MatrizEsparsa<T>::put(int l,int c, T  informacao)
       if(linhaProcurada->getColuna(c) != NULL)
             throw invalid_argument("Já existe uma coluna associada a essa linha");
       else // se nao insere a coluna na linha existente
-        linhaProcurada->getColunas()->inserir(c,&informacao);
+        linhaProcurada->getColunas()->inserir(c, clone);
       }
 
   }
