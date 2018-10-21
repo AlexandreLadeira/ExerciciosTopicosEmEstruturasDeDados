@@ -1,27 +1,23 @@
 # depslib dependency file v1.0
-1538255933 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\main.cpp
-	<fstream>
+1446667744 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\main.cpp
 	<iostream>
-	"ArvoreAVLEmDisco.h"
-	<vector>
-	"Aluno.h"
-	"IndiceDisponivel.h"
 
-1538255877 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\src\arvoreavlemdisco.cpp
-	"ArvoreAVLEmDisco.h"
-
-1538255854 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\include\arvoreavlemdisco.h
-	<fstream>
+1540142768 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\src\main.cpp
 	<iostream>
-	"Aluno.h"
-	"No.h"
-	"Indice.h"
+	<fstream>
+	<string.h>
+	"ArvoreEmDisco.hpp"
 
-1538231274 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\include\aluno.h
+1540143203 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\src\arvoreemdisco.hpp
+	<iostream>
+	<stdlib.h>
+	"No.hpp"
+	"ArvoreEmDisco.inl"
 
-1538253526 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\include\no.h
+1540139402 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\src\no.hpp
+	<iostream>
 
-1538254792 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\include\indicedisponivel.h
-
-1538254768 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\include\indice.h
+1540143198 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\arvoreavlemdisco\src\arvoreemdisco.inl
+	<stdexcept>
+	<stack>
 
