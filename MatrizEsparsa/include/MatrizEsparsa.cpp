@@ -23,8 +23,8 @@ T  MatrizEsparsa<T>::get(unsigned int linha, unsigned int coluna)
             return *informacaoProcurada;
     }
 
-    //Se a linha nao existir, ou a coluna nao existir retona NULL
-    return NULL;
+    //Se a linha nao existir, ou a coluna nao existir retorna o valor padrão
+    return this->padrao;
 
 }
 
