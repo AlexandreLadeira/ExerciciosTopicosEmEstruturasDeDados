@@ -1,0 +1,69 @@
+# depslib dependency file v1.0
+1540147283 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\informacaodearvoreavl.cpp
+	"InformacaoDeArvoreAVL.h"
+
+1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\informacaodearvoreavl.h
+
+1542985697 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\grafo.cpp
+	"Grafo.h"
+
+1542983582 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\grafo.h
+	"MatrizEsparsa.h"
+	"tipoOrientacao.h"
+	<vector>
+	<string.h>
+
+1542985313 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\main.cpp
+	<iostream>
+	"Grafo.h"
+	"MatrizEsparsa.h"
+	"tipoOrientacao.h"
+	"Grafo.h"
+	<stdexcept>
+	<stdlib.h>
+
+1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\matrizesparsa.h
+	"ArvoreAVL.h"
+	"Linha.h"
+	"Coluna.h"
+	"MatrizEsparsa.cpp"
+
+1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\arvoreavl.h
+	<iostream>
+	<stdexcept>
+	<stdlib.h>
+	"NoAVL.h"
+	"InformacaoDeArvoreAVL.h"
+	"ArvoreAVL.cpp"
+
+1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\noavl.h
+	<iostream>
+	<stdlib.h>
+	<stdexcept>
+	"InformacaodeArvoreAVL.h"
+	"NoAVL.cpp"
+
+1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\noavl.cpp
+
+1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\arvoreavl.cpp
+
+1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\linha.h
+	<iostream>
+	<stdexcept>
+	<stdlib.h>
+	"ArvoreAVL.h"
+	"Coluna.h"
+	"Linha.cpp"
+
+1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\coluna.h
+	"ArvoreAVL.h"
+	"Coluna.cpp"
+
+1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\coluna.cpp
+
+1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\linha.cpp
+
+1542976831 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\matrizesparsa.cpp
+
+1542978626 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\tipoorientacao.h
+
