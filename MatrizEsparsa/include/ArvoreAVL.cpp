@@ -391,6 +391,12 @@ void ArvoreAVL<T>::desenhaArvore(NoAVL<T> *no, int profundidade, char *caminho, 
 }
 
 template <class T>
+NoAVL<T> * ArvoreAVL<T>::getRaiz()
+{
+   return this->raiz;
+}
+
+template <class T>
 void ArvoreAVL<T>::desenhaArvore(ostream& os) const
 {
 
@@ -408,6 +414,28 @@ ostream& operator << (ostream& os, const ArvoreAVL<T>& arv)
 
     return os;
 }
+
+template <class T>
+void ArvoreAVL<T>::montaOsSequencial(ostream& os)
+{
+   this->montaOsSequencial(this->raiz,os);
+}
+
+template <class T>
+void ArvoreAVL<T>::montaOsSequencial(NoAVL<T> * no,ostream& os)
+{
+    if (no == NULL)
+        return;
+
+    this->montaOsSequencial(no->getEsquerda(),os);
+    os << "(";
+    os << no->getChave();
+    os << ",";
+    os << (*(no->getInfo()));
+    os << ")";
+    this->montaOsSequencial(no->getDireita(),os);
+}
+
 
 
 //A estrutura e o funcionamento da arvore foram baseados no vídeo

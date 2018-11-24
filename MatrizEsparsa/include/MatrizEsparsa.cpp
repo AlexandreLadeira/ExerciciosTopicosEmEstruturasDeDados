@@ -73,3 +73,56 @@ void MatrizEsparsa<T>::put(int l,int c, T  informacao)
 
 
 }
+template <class T>
+void MatrizEsparsa<T>::printaLinhas()
+{
+    NoAVL<Linha<T> > * no = this->linhas->getRaiz();
+    this->printaLinhas(no);
+}
+
+template <class T>
+void MatrizEsparsa<T>::printaLinhas(NoAVL<Linha<T> > * no)
+{
+    if(no == NULL)
+        return;
+
+    printaLinhas(no->getEsquerda());
+    cout << no->getInfo();
+    printaLinhas(no->getDireita());
+
+
+
+}
+template <class T>
+void MatrizEsparsa<T>::montaOsMatriz(ostream& os)
+{
+  this->montaOsMatriz(os,this->linhas->getRaiz());
+}
+
+template <class T>
+void MatrizEsparsa<T>::montaOsMatriz(ostream& os,NoAVL<Linha<T> > * no)
+{
+    if(no == NULL)
+        return;
+
+    this->montaOsMatriz(os,no->getEsquerda());
+    os << "";
+    os << no->getChave();
+    //os << "  ";
+    os << "-->";
+    Linha<T>* linhaProcurada = (Linha<T>*)this->linhas->get(no->getChave());
+    os << linhaProcurada;
+    os << "\n";
+    this->montaOsMatriz(os,no->getDireita());
+
+}
+
+template <class T>
+ostream& operator<<(ostream& os, MatrizEsparsa<T>* mat)
+{
+   //"LinhaX-->(coluna,distancia)(coluna2,distancia2)...;
+   mat->montaOsMatriz(os);
+   return os;
+}
+
+

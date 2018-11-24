@@ -20,9 +20,13 @@ class ArvoreAVL
         bool tem(int);
         T * get(int);
 
+        NoAVL<T> * getRaiz();
+
         void printa();
 
         int getQtdNos();
+
+        void montaOsSequencial(ostream&);
 
         template <class U>
         friend ostream& operator<< (ostream&, const ArvoreAVL<U>&);
@@ -53,6 +57,8 @@ class ArvoreAVL
 
         void desenhaArvore(NoAVL<T> *, int , char *, int,ostream& ) const;
         void desenhaArvore(ostream& ) const;
+
+        void montaOsSequencial(NoAVL<T>*, ostream&);
 
         NoAVL<T> * raiz;
         unsigned int qtdNos;

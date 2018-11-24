@@ -25,6 +25,8 @@ class Linha
         bool excluiColuna(unsigned int);
         bool temColuna(int c);
 
+        friend ostream& operator<<(ostream&, const Linha<T>*);
+
 
 
     protected:

@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1542976832 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\main.cpp
+1543021149 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\main.cpp
 	<iostream>
 	"ArvoreAVL.h"
 	"MatrizEsparsa.h"
+	"Coluna.h"
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\arvoreavl.h
+1543019417 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\arvoreavl.h
 	<iostream>
 	<stdexcept>
 	<stdlib.h>
@@ -27,7 +28,7 @@
 1538242439 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\coluna.cpp
 	"Coluna.h"
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\coluna.h
+1543020979 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\coluna.h
 	"ArvoreAVL.h"
 	"Coluna.cpp"
 
@@ -42,10 +43,11 @@
 1538845490 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\matrizesparsa.cpp
 	"MatrizEsparsa.h"
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\matrizesparsa.h
+1543018038 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\matrizesparsa.h
 	"ArvoreAVL.h"
 	"Linha.h"
 	"Coluna.h"
+	"NoAVL.h"
 	"MatrizEsparsa.cpp"
 
 1536361058 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\minhainformacao.cpp
@@ -63,7 +65,7 @@
 1538843978 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\src\linha.cpp
 	"Linha.h"
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\linha.h
+1543016556 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\linha.h
 	<iostream>
 	<stdexcept>
 	<stdlib.h>
@@ -71,7 +73,7 @@
 	"Coluna.h"
 	"Linha.cpp"
 
-1542976831 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\matrizesparsa.cpp
+1543021683 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\matrizesparsa.cpp
 
 1538843892 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\arvoreavl.cpp
 	"ArvoreAVL.h"
@@ -94,11 +96,11 @@
 1538844517 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\noavl.cpp
 	"NoAvl.h"
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\linha.cpp
+1543019718 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\linha.cpp
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\coluna.cpp
+1543020941 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\coluna.cpp
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\arvoreavl.cpp
+1543021397 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\arvoreavl.cpp
 
 1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\noavl.cpp
 
