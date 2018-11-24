@@ -42,3 +42,18 @@ const char* Coluna<T>::toString()
   return this->informacao->toString();
 }
 
+template <class T>
+ostream& operator<<(ostream& os, Coluna<T>* coluna)
+{
+   os << coluna->getIndice();
+   return os;
+}
+
+template <class T>
+ostream& operator<<(ostream& os, const  Coluna<T>& coluna)
+{
+   os << coluna->getIndice();
+   return os;
+}
+
+

@@ -4,16 +4,16 @@
 
 1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\informacaodearvoreavl.h
 
-1542985697 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\grafo.cpp
+1543025398 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\grafo.cpp
 	"Grafo.h"
 
-1542983582 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\grafo.h
+1543025416 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\grafo.h
 	"MatrizEsparsa.h"
 	"tipoOrientacao.h"
 	<vector>
 	<string.h>
 
-1542985313 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\main.cpp
+1543025374 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\main.cpp
 	<iostream>
 	"Grafo.h"
 	"MatrizEsparsa.h"
@@ -22,16 +22,22 @@
 	<stdexcept>
 	<stdlib.h>
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\matrizesparsa.h
+1543024264 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\matrizesparsa.h
 	"ArvoreAVL.h"
 	"Linha.h"
 	"Coluna.h"
+	"NoAVL.h"
+	<string.h>
+	<vector>
+	"Vertice.h"
 	"MatrizEsparsa.cpp"
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\arvoreavl.h
+1543024740 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\arvoreavl.h
 	<iostream>
 	<stdexcept>
 	<stdlib.h>
+	<vector>
+	"Vertice.h"
 	"NoAVL.h"
 	"InformacaoDeArvoreAVL.h"
 	"ArvoreAVL.cpp"
@@ -45,9 +51,9 @@
 
 1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\noavl.cpp
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\arvoreavl.cpp
+1543024824 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\arvoreavl.cpp
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\linha.h
+1543023933 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\linha.h
 	<iostream>
 	<stdexcept>
 	<stdlib.h>
@@ -55,15 +61,17 @@
 	"Coluna.h"
 	"Linha.cpp"
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\coluna.h
+1543020979 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\coluna.h
 	"ArvoreAVL.h"
 	"Coluna.cpp"
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\coluna.cpp
+1543020941 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\coluna.cpp
 
-1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\linha.cpp
+1543024002 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\linha.cpp
 
-1542976831 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\matrizesparsa.cpp
+1543024043 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\matrizesparsa.cpp
 
 1542978626 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\tipoorientacao.h
+
+1543024246 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\vertice.h
 

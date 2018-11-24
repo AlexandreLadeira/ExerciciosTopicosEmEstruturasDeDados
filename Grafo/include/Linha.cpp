@@ -27,6 +27,14 @@ Coluna<T> * Linha<T>::getColuna(unsigned int c)
     return (Coluna<T>*)this->colunas->get(c);
 }
 
+template <class T>
+ostream& operator<<(ostream& os, Linha<T>* linha)
+{
+   linha->getColunas()->montaOsSequencial(os);
+   return os;
+}
+
+
 
 
 

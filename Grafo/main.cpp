@@ -12,16 +12,25 @@ int main()
 {
     try
     {
-    Grafo meuGrafo(0,naoDirigido);
+    Grafo meuGrafo(dirigido);
 
     meuGrafo.addVertice("A");
-   // meuGrafo.delVertice("B");
+    meuGrafo.addVertice("B");
     meuGrafo.addVertice("C");
+    meuGrafo.addVertice("D");
+    meuGrafo.addVertice("E");
 
-    //meuGrafo.addAresta("A","C",10);
-   // meuGrafo.addAresta("C","A",9);
+    meuGrafo.addAresta("A","B",1);
+    meuGrafo.addAresta("A","C",2);
+    meuGrafo.addAresta("B","C",3);
+    meuGrafo.addAresta("D","E",4);
+    meuGrafo.addAresta("C","E",7);
+    meuGrafo.addAresta("A","E",1);
 
-    meuGrafo.delAresta("C","A");
+
+
+
+    cout << meuGrafo;
 
 
     }

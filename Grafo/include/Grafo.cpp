@@ -1,8 +1,7 @@
 #include "Grafo.h"
 
-Grafo::Grafo(unsigned int maxV,tipoOrientacao tip):tipo(tip)
+Grafo::Grafo(tipoOrientacao tip):tipo(tip)
 {
-   this->maxVertices = maxV;
    this->indiceNovoVertice = 0;
    this->arestas = new MatrizEsparsa<int>(0);
 }
@@ -39,6 +38,9 @@ void Grafo::addAresta(char* inicio, char* fim, int distancia)
 
     int indiceInicio = this->encontraVertice(inicio);
     int indiceFim = this->encontraVertice(fim);
+
+    if (indiceFim < 0 || indiceInicio < 0)
+        throw invalid_argument("Nao eh permitido criar arestas para vertices inexistentes");
 
     if(this->arestas->get(indiceInicio, indiceFim) != 0 )
         throw invalid_argument("A aresta ja existe");
@@ -85,5 +87,16 @@ int Grafo::encontraVertice(char* procurado)
             return i;
 
     return -1;
+}
+
+void Grafo::montaOsGrafo(ostream& os) const
+{
+    this->arestas->montaOsGrafo(os,this->vertices);
+}
+
+ostream& operator << (ostream& os, const Grafo& grafo)
+{
+    grafo.montaOsGrafo(os);
+    return os;
 }
 

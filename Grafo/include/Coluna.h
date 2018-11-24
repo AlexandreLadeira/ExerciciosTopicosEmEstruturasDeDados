@@ -16,6 +16,9 @@ class Coluna
         int compareTo(T*);
         const char* toString();
 
+        friend ostream& operator<<(ostream&,  const Coluna<T>*);
+        friend ostream& operator<< (ostream&, const Coluna<T>&);
+
     protected:
 
     private:

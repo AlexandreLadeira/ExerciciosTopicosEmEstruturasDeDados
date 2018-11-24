@@ -65,6 +65,7 @@
 		<Unit filename="include/TipoOrientacao.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="include/Vertice.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

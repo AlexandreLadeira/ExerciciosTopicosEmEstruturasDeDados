@@ -4,6 +4,8 @@
 #include <iostream>
 #include <stdexcept>
 #include <stdlib.h>
+#include <vector>
+#include "Vertice.h"
 #include "NoAVL.h"
 #include "InformacaoDeArvoreAVL.h"
 
@@ -20,9 +22,14 @@ class ArvoreAVL
         bool tem(int);
         T * get(int);
 
+        NoAVL<T> * getRaiz();
+
         void printa();
 
         int getQtdNos();
+
+        void montaOsSequencial(ostream&);
+        void montaOsSequencialGrafo(ostream&,std::vector<Vertice>);
 
         template <class U>
         friend ostream& operator<< (ostream&, const ArvoreAVL<U>&);
@@ -53,6 +60,11 @@ class ArvoreAVL
 
         void desenhaArvore(NoAVL<T> *, int , char *, int,ostream& ) const;
         void desenhaArvore(ostream& ) const;
+
+        char * encontraNome(int ,std::vector<Vertice>);
+
+        void montaOsSequencial(NoAVL<T>*, ostream&);
+        void montaOsSequencialGrafo(NoAVL<T>*, ostream&,std::vector<Vertice>);
 
         NoAVL<T> * raiz;
         unsigned int qtdNos;

@@ -391,6 +391,12 @@ void ArvoreAVL<T>::desenhaArvore(NoAVL<T> *no, int profundidade, char *caminho, 
 }
 
 template <class T>
+NoAVL<T> * ArvoreAVL<T>::getRaiz()
+{
+   return this->raiz;
+}
+
+template <class T>
 void ArvoreAVL<T>::desenhaArvore(ostream& os) const
 {
 
@@ -408,6 +414,61 @@ ostream& operator << (ostream& os, const ArvoreAVL<T>& arv)
 
     return os;
 }
+
+template <class T>
+void ArvoreAVL<T>::montaOsSequencial(ostream& os)
+{
+   this->montaOsSequencial(this->raiz,os);
+}
+template <class T>
+void ArvoreAVL<T>::montaOsSequencial(NoAVL<T> * no,ostream& os)
+{
+    if (no == NULL)
+        return;
+
+    this->montaOsSequencial(no->getEsquerda(),os);
+    os << "(";
+    os << no->getChave();
+    os << ",";
+    os << (*(no->getInfo()));
+    os << ")";
+    this->montaOsSequencial(no->getDireita(),os);
+}
+
+
+template <class T>
+void ArvoreAVL<T>::montaOsSequencialGrafo(ostream& os,std::vector<Vertice> vertices)
+{
+   this->montaOsSequencialGrafo(this->raiz,os,vertices);
+}
+
+template <class T>
+char * ArvoreAVL<T>::encontraNome(int indice, std::vector<Vertice> vertices)
+{
+    for(int i = 0; i < vertices.size(); i++)
+        if(vertices[i].indice == indice)
+            return vertices[i].nome;
+}
+
+
+template <class T>
+void ArvoreAVL<T>::montaOsSequencialGrafo(NoAVL<T> * no,ostream& os,std::vector<Vertice> vertices)
+{
+    if (no == NULL)
+        return;
+
+    this->montaOsSequencialGrafo(no->getEsquerda(),os,vertices);
+    os << "(";
+    os << this->encontraNome(no->getChave(),vertices);
+    os << ",";
+    os << (*(no->getInfo()));
+    os << ")";
+    this->montaOsSequencialGrafo(no->getDireita(),os,vertices);
+}
+
+
+
+
 
 
 //A estrutura e o funcionamento da arvore foram baseados no vídeo
