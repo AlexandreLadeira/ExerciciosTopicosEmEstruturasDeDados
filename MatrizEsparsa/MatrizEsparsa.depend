@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1543021149 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\main.cpp
+1543178253 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\main.cpp
 	<iostream>
 	"ArvoreAVL.h"
 	"MatrizEsparsa.h"
@@ -100,7 +100,7 @@
 
 1543020941 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\coluna.cpp
 
-1543021397 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\arvoreavl.cpp
+1543178013 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\arvoreavl.cpp
 
 1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\matrizesparsa\include\noavl.cpp
 

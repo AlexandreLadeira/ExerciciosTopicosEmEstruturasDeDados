@@ -124,10 +124,10 @@ NoAVL<T> * ArvoreAVL<T>::excluir(NoAVL<T> * no, int chave)
 
 
     //Está mais a esquerda.
-    if(no->getChave() < chave)
+    if(no->getChave() > chave)
         no->setEsquerda(this->excluir(no->getEsquerda(),chave));
     // está mais a direita
-    else if(no->getChave() > chave)
+    else if(no->getChave() < chave)
         no->setDireita(this->excluir(no->getDireita(),chave));
     // O nó foi encontrado e n tem subavore a esquerda.
     else if(no->getEsquerda() == NULL)
