@@ -4,7 +4,7 @@
 
 1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\informacaodearvoreavl.h
 
-1543025398 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\grafo.cpp
+1543177719 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\grafo.cpp
 	"Grafo.h"
 
 1543025416 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\grafo.h
@@ -13,7 +13,7 @@
 	<vector>
 	<string.h>
 
-1543025374 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\main.cpp
+1543177775 source:c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\main.cpp
 	<iostream>
 	"Grafo.h"
 	"MatrizEsparsa.h"
@@ -51,7 +51,7 @@
 
 1540147283 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\noavl.cpp
 
-1543024824 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\arvoreavl.cpp
+1543176932 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\arvoreavl.cpp
 
 1543023933 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\linha.h
 	<iostream>
@@ -69,7 +69,7 @@
 
 1543024002 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\linha.cpp
 
-1543024043 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\matrizesparsa.cpp
+1543177657 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\matrizesparsa.cpp
 
 1542978626 c:\users\alex\documents\github\exerciciostopicosemestruturasdedados\grafo\include\tipoorientacao.h
 

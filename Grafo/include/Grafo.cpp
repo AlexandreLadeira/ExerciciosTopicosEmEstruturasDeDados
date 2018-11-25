@@ -23,7 +23,17 @@ void Grafo::delVertice(char* nome)
     if(indiceRemovido >= 0)
     {   // Apaga o vertice indicado pela posição, realocando todo o vetor
         this->vertices.erase(this->vertices.begin() + indiceRemovido);
-        //Falta remover todas a lisgacoes que ele possui na matriz
+
+        //Remove todas a ligações que o vertice possui
+        for(int i = 0; i < this->vertices.size(); i++)
+        {
+            if(this->arestas->get(indiceRemovido,this->vertices[i].indice) != 0)
+                this->arestas->put(indiceRemovido,this->vertices[i].indice,0);
+
+            if(this->arestas->get(this->vertices[i].indice,indiceRemovido) != 0)
+                this->arestas->put(this->vertices[i].indice,indiceRemovido,0);
+        }
+
 
     }
     else
@@ -71,6 +81,7 @@ void Grafo::delAresta(char* inicio, char* fim)
         // uma aresta indiceFim->indiceInicio na matriz, portanto apagamos
         if(this->tipo == naoDirigido)
              this->arestas->put(indiceFim,indiceInicio,0);
+
     }
     else
         throw invalid_argument("A aresta a ser excluida nao existe");
@@ -81,8 +92,7 @@ void Grafo::delAresta(char* inicio, char* fim)
 int Grafo::encontraVertice(char* procurado)
 {
     //Encontra o indice do vertice com o nome procurado, retornando -1 se não encontrar
-    int i = 0;
-    for(; i < this->vertices.size(); i++)
+    for(int i = 0; i < this->vertices.size(); i++)
         if(strcmp(procurado,this->vertices[i].nome) == 0)
             return i;
 
